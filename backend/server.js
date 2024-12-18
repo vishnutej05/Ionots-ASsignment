@@ -20,6 +20,9 @@ mongoose
 // Routes
 const projectRoutes = require("./routes/projectRoutes");
 
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to the server</h1>");
+});
 app.use("/api/projects", projectRoutes);
 
 const PORT = process.env.PORT || 5000;
